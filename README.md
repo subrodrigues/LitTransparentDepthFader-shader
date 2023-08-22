@@ -1,24 +1,35 @@
 # Lit Transparent Depth Fader | Shader for Unity
-**LitTransparentDepthFader** shader provides support for Transparency and (Camera) Depth Fade, similar to the standard Unity Particles shaders, however, goes a step further by supporting shadows and all light types (such as pixel lighting) found in the physically based standard lighting model, with Metallic and Smoothness/Glossiness of the material controlled by sliders.
+**LitTransparentDepthFader** shader provides support for Transparency and (Camera) Depth Fade, similar to the standard Unity Particles shaders, however, goes a step further by supporting shadows and all light types (such as pixel lighting) found in the physically based standard lighting model. Metallic and Smoothness/Glossiness adjusted by sliders.
 
 How to Use
 --------
-Add the `LitTransparentDepthFader.shader` to your project Assets. In the chosen Material Shader select: `Custom/LitTransparentDepthFader`
+Place the `LitTransparentDepthFader.shader` file within your project's Assets folder. Then, in the desired Material Shader select `Custom/LitTransparentDepthFader`.
 
 Additional Info
 --------
 ### Inspector
-![ScreenshotA1][ImageA1] 
+![Inspector][UnityIDE] 
 
-A: Color tint texture and add alpha
-B: Smoothness/Glossiness slider to control the spread of highlights on the surface
-C: Metallic slider controls the reflection of the environment, when increased the material's albedo colour becomes less visible
-D: Depth Near controls the near camera length at which the material starts to fade
-E: Depth Far controls how far the surface can get away from the camera before starting to fade
-F: Depth Power controls the depth strength 
+1. Color tint texture and add alpha
+2. Smoothness/Glossiness slider to control the spread of highlights on the surface
+3. Metallic slider controls the reflection of the environment, when increased the material's albedo colour becomes less visible
+4. Depth Near controls the near camera length at which the material starts to fade
+5. Depth Far controls how far the surface can get away from the camera before starting to fade
+6. Depth Power controls the depth strength 
 
 Examples
 --------
+### DepthFader-ON | Transparency-ON
+![DepthFaderON_TransparencyON][DepthFaderON_TransparencyON] 
+
+### DepthFader-ON | Transparency-OFF
+![DepthFaderON_TransparencyOFF][DepthFaderON_TransparencyOFF] 
+
+### DepthFader-OFF | Transparency-OFF
+![DepthFaderOFF_TransparencyOFF][DepthFaderOFF_TransparencyOFF] 
+
+### DepthFader-OFF | Transparency-OFF | No Light
+![DepthFaderOFF_TransparencyOFF_NOLIGHT][DepthFaderOFF_TransparencyOFF_NOLIGHT] 
 
 License
 -------
@@ -31,4 +42,8 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-[ImageA1]: https://github.com/subrodrigues/LitTransparentDepthFader-shader/assets/2995364/87f69dfe-874c-4eb5-9992-cbb552acb288
+[UnityIDE]: https://github.com/subrodrigues/LitTransparentDepthFader-shader/assets/2995364/e0072484-e564-491e-9524-edbad9013126
+[DepthFaderON_TransparencyON]: https://github.com/subrodrigues/LitTransparentDepthFader-shader/assets/2995364/33351313-d023-4775-b881-a56234b06f33
+[DepthFaderON_TransparencyOFF]: https://github.com/subrodrigues/LitTransparentDepthFader-shader/assets/2995364/98a60b9d-ca8f-476f-a809-2202dc0714f6
+[DepthFaderOFF_TransparencyOFF]: https://github.com/subrodrigues/LitTransparentDepthFader-shader/assets/2995364/0dbb6396-fc0b-4bb2-bdd0-94eb9566ad96
+[DepthFaderOFF_TransparencyOFF_NOLIGHT]: https://github.com/subrodrigues/LitTransparentDepthFader-shader/assets/2995364/b8b7fbbb-c519-4398-b674-898a43fc61ae
