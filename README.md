@@ -31,6 +31,7 @@ Examples
 ### DepthFader-OFF | Transparency-OFF | No Light
 ![DepthFaderOFF_TransparencyOFF_NOLIGHT][DepthFaderOFF_TransparencyOFF_NOLIGHT] 
 
+### DepthFader-ON | Transparency-ON | Multiple Lights
 https://github.com/subrodrigues/LitTransparentDepthFader-shader/assets/2995364/aafdfd9a-518e-4693-9d24-97b0dbf2dba8
 
 License
