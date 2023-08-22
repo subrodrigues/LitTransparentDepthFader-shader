@@ -1,5 +1,4 @@
 # Lit Transparent Depth Fader | Shader for Unity
-==========================================
 **LitTransparentDepthFader** shader provides support for Transparency and (Camera) Depth Fade, similar to the standard Unity Particles shaders, however, goes a step further by supporting shadows and all light types (such as pixel lighting) found in the physically based standard lighting model, with Metallic and Smoothness/Glossiness of the material controlled by sliders.
 
 How to Use
