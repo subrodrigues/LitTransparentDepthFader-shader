@@ -50,7 +50,7 @@ Shader "Custom/LitTransparentDepthFader"
 	        void vert (inout appdata_full v, out Input o)
 	        {
 	            UNITY_INITIALIZE_OUTPUT(Input, o);
-	            COMPUTE_EYEDEPTH(o.eyeDepth);
+	            COMPUTE_EYEDEPTH(o.eyeDepth); // Calculate z axis from object camera space
 	        }
 
 		void surf (Input IN, inout SurfaceOutputStandard o)
@@ -63,9 +63,11 @@ Shader "Custom/LitTransparentDepthFader"
 			o.Smoothness = _Glossiness;
 			
 			// Then we change alpha by depth
-			float2 screenUV = IN.screenPos.xy/IN.screenPos.w;
+
+			// Calculate distance between [0,1]
 			float dist = (clamp(IN.eyeDepth, _DepthNear, _DepthFar) - _DepthNear) / (_DepthFar - _DepthNear);
-			dist = 1 - pow(1 - dist * 0.99999, _DepthPower);
+			// Apply power [dist, max]
+			dist = 1 - pow(1 - dist, _DepthPower);
 		           
 			// Finally, apply the alpha from depth AND texture 
 			o.Alpha = clamp(1 - dist, 0, 1) * c.a;
